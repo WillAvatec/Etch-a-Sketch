@@ -1,4 +1,11 @@
 .container {
     background-color: #629090;
     display: grid;
+    width: 50vh;
+    height: 50vh;
+}
+
+.cell {
+    border : 1px solid aquamarine;
+    box-sizing: border-box;
 }
