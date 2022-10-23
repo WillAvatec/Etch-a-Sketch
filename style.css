@@ -1,11 +1,24 @@
-.container {
+:root {
+    --grid-rows:1;
+    --grid-columns:1;
+}
+
+#container {
+    margin: 0;
     background-color: #629090;
     display: grid;
-    width: 50vh;
-    height: 50vh;
+    gap: 16px;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: repeat(var(--grid-rows),22px);
+    grid-template-columns: repeat(var(--grid-columns),22px);
 }
 
 .cell {
-    border : 1px solid aquamarine;
+    padding: 1em;
+    border : 1px solid #ddd;
     box-sizing: border-box;
+    text-align: left;
 }
