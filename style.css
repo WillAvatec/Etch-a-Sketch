@@ -4,21 +4,26 @@
 }
 
 #container {
-    margin: 0;
-    background-color: #629090;
+    margin: 40px;
     display: grid;
-    gap: 16px;
-    justify-content: center;
-    align-content: center;
-    width: 100vw;
-    height: 100vh;
-    grid-template-rows: repeat(var(--grid-rows),22px);
-    grid-template-columns: repeat(var(--grid-columns),22px);
+    background-color: aquamarine;
+    width: 480px;
+    height: 480px;
+    grid-template-rows: repeat(var(--grid-rows, 16),1fr);
+    grid-template-columns: repeat(var(--grid-columns, 16),1fr);
+    box-shadow: 0 0 10px rgb(59, 133, 109);
+}
+
+#bod {
+    background-image: url(./background.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;    
 }
 
 .cell {
-    padding: 1em;
-    border : 1px solid #ddd;
-    box-sizing: border-box;
-    text-align: left;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
