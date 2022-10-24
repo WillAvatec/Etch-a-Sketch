@@ -1,7 +1,9 @@
 // Variables Globales
 
 const container = document.getElementById("container");
-const btn = document.getElementById("btn");
+const resizeBtn = document.getElementById("resize");
+const clearBtn = document.getElementById("clear");
+const rainbowBtn = document.getElementById("rainbow");
 
 // Crea la cuadricula usando dos parametros(filas y columnas) --- Se puede mejorar a un solo parametro
 function makeGrid(rows,columns) {
@@ -31,10 +33,32 @@ function attachListener(){
 
 function newSize(){
     let chose = prompt("How many squares per line?","16");
+    if (chose > 100) return alert("The maximun grid value is 99.");
+    else if (chose == null) return alert(`The grid remains unchanged.`);
+    cleanBackG();
     makeGrid(chose,chose);
     attachListener();
+
+}
+
+//Funcion que limpie los backgrounds
+
+function cleanBackG() {
+    let colored = container.querySelectorAll("div");
+    colored.forEach(one=>one.style.background="aquamarine");
+}
+
+
+//Funcion que se encargue de cambiar color de los backgrounds de manera arbitraria
+
+function makeItRainbow() {
+    let divs = container.querySelectorAll("div");
+    divs.forEach(div=>div.addEventListener("mouseover",()=>div.style["background"]=`hsl(${(Math.random())*360},100%,50%)`))
+    
 }
 
 //Aqui se encuentran todos los eventlistener de los botones
 
-btn.addEventListener("click",newSize);
+resizeBtn.addEventListener("click",newSize);
+clearBtn.addEventListener("click",cleanBackG);
+rainbowBtn.addEventListener("click",makeItRainbow);
