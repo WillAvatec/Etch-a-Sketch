@@ -57,7 +57,7 @@ function makeItRainbow() {
     
 }
 
-//Aqui se encuentran todos los eventlistener de los botones
+//Aqui se encuentran todos los eventlistener de los botones.
 
 resizeBtn.addEventListener("click",newSize);
 clearBtn.addEventListener("click",cleanBackG);
