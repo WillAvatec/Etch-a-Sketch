@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-Project of Curriculum by The Odin Project(TOP)
+Project made from Curriculum by The Odin Project(TOP)
 
 Still on working process
 
